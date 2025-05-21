@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Children's Initiative India - Educate. Empower. Support.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a class="flex items-center space-x-2" href="#">
+          <img alt="Children's Initiative India logo, stylized letters CII in blue and orange" class="h-10 w-10" height="40" src="CII_logo.jpg" width="40"/>
+          <span class="font-bold text-xl text-indigo-700">Children's Initiative India</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
+          <a class="hover:text-indigo-600 transition" href="#modules">Modules</a>
+          <a class="hover:text-indigo-600 transition" href="#ani-chatbot">ANI Chatbot</a>
+          <a class="hover:text-indigo-600 transition" href="#storieChildrens">Youth Stories</a>
+          <a class="hover:text-indigo-600 transition" href="#events">Events</a>
+          <a class="hover:text-indigo-600 transition" href="#resources">Resources</a>
+          <a class="hover:text-indigo-600 transition" href="#contact">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button aria-label="Toggle menu" class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="mobile-menu-button">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+      <a class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50" href="#modules">Modules</a>
+      <a class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50" href="#ani-chatbot">ANI Chatbot</a>
+      <a class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50" href="#stories">Youth Stories</a>
+      <a class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50" href="#events">Events</a>
+      <a class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50" href="#resources">Resources</a>
+      <a class="block px-4 py-3 hover:bg-indigo-50" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section aria-label="Hero section with tagline and call to actions" class="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white py-20 px-6 sm:px-12 md:px-20 lg:px-32">
+    <div class="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-12">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">Educate. Empower. Support.</h1>
+        <p class="text-lg sm:text-xl mb-8">An inclusive, youth-centric platform built for all young people, with a special focus on those aged 15–21 years.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a class="inline-block bg-white text-indigo-700 font-semibold rounded-md px-6 py-3 shadow-md hover:bg-indigo-100 transition" href="#modules">Explore Modules</a>
+          <a class="inline-block border-2 border-white text-white font-semibold rounded-md px-6 py-3 hover:bg-white hover:text-indigo-700 transition" href="#ani-chatbot">Talk to ANI</a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center md:justify-end">
+        <img alt="Group of diverse Indian youth smiling and engaged in learning, representing inclusivity and empowerment" class="rounded-lg shadow-lg max-w-full h-auto" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8c1ed5d5-87b1-47eb-dc7a-700838f86d41.jpg" width="400"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission -->
+  <section aria-label="Our mission section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-white" id="mission">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-6">Our Mission</h2>
+      <p class="max-w-3xl mx-auto text-lg text-gray-700 mb-8">Empowering India's youth with knowledge, resources, and support to navigate social challenges and create more equitable communities.</p>
+      <a class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-8 py-3 shadow-md hover:bg-indigo-700 transition" download="ChildrensInitiative_Brochure.pdf" href="https://placehold.co/600x800/png?text=Download+Brochure+Placeholder">Download Our Brochure</a>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section aria-label="Core pillars: Educate, Empower, Support" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-indigo-50">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      <div>
+        <img alt="Icon representing education, an open book with rays of light" class="mx-auto mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1df53e91-43fa-4be0-f0c6-4a463342a6a6.jpg" width="100"/>
+        <h3 class="text-xl font-bold text-indigo-700 mb-2">Educate</h3>
+        <p class="text-gray-700 max-w-xs mx-auto">Providing accessible information on gender, mental health, sexuality, safety, consent, and legal awareness.</p>
+      </div>
+      <div>
+        <img alt="Icon representing empowerment, a raised fist with rays" class="mx-auto mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e364529b-5da5-40a6-566d-4d160c9fb5e3.jpg" width="100"/>
+        <h3 class="text-xl font-bold text-indigo-700 mb-2">Empower</h3>
+        <p class="text-gray-700 max-w-xs mx-auto">Building confidence and skills for youth to make informed decisions and stand up for themselves and others.</p>
+      </div>
+      <div>
+        <img alt="Icon representing support, two hands holding a heart" class="mx-auto mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/70e53ebd-2e13-456d-1862-861d30ec06f6.jpg" width="100"/>
+        <h3 class="text-xl font-bold text-indigo-700 mb-2">Support</h3>
+        <p class="text-gray-700 max-w-xs mx-auto">Creating safe digital spaces where youth can learn, express, and access support—free of stigma or fear.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Modules -->
+  <section aria-label="Learning modules section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-white" id="modules">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10 text-center">Learning Modules</h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Module 1 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing diverse youth discussing gender roles and equality" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a739e00e-7c2a-42b6-f0e3-8941db8a4245.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Gender, Masculinity & Equality</h3>
+          <p class="text-gray-700 mb-4 flex-grow">This module explores the concepts of gender, masculinity, and equality, aiming to dismantle harmful stereotypes and promote inclusive attitudes. Participants learn about the societal constructs of gender roles, the impact of toxic masculinity, and the importance of advocating for gender equality. Through interactive discussions and real-world examples, youth are encouraged to challenge biases, foster respect, and build equitable communities. Key topics include understanding gender stereotypes, promoting healthy masculinity, and recognizing the value of equal opportunities for all.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+        <!-- Module 2 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing hand gestures indicating boundaries and consent" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ea0c6092-1153-44ca-b8b4-2af56a833230.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Safe vs. Unsafe Touch</h3>
+          <p class="text-gray-700 mb-4 flex-grow">The Safe vs. Unsafe Touch module equips young people with the knowledge to identify appropriate and inappropriate physical interactions. It emphasizes the importance of personal boundaries and empowers youth to assertively say "no" to uncomfortable situations. The session includes practical guidance on recognizing unsafe touch, understanding bodily autonomy, and knowing how to report incidents to trusted adults or authorities. Through role-playing and discussions, participants gain confidence in protecting themselves and supporting others in maintaining personal safety.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+        <!-- Module 3 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing child rights and protection from trafficking" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a69f2576-f32d-4178-e4ec-983539dde806.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Child Marriage, Labor & Trafficking</h3>
+          <p class="text-gray-700 mb-4 flex-grow">This module addresses critical issues affecting youth, including child marriage, child labor, and human trafficking. It educates participants about their rights under Indian laws, such as the POCSO Act and Juvenile Justice Act, and highlights warning signs of exploitation. The session empowers youth to recognize and report suspicious activities, ensuring they know how to seek help. Through case studies and group activities, participants learn about the consequences of these issues and how to advocate for child protection in their communities.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+        <!-- Module 4 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing two young people communicating with respect and boundaries" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e02a4c92-a1c4-43be-dcbe-d1b997ad04f3.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Relationships, Consent & Boundaries</h3>
+          <p class="text-gray-700 mb-4 flex-grow">The Relationships, Consent & Boundaries module focuses on fostering healthy interpersonal relationships among youth. It covers the principles of mutual respect, effective communication, and the importance of consent in all interactions. Participants learn to set and respect personal boundaries, recognize signs of unhealthy relationships, and practice assertive communication. Through interactive scenarios and group discussions, this session helps youth build skills to navigate friendships, romantic relationships, and family dynamics with confidence and respect.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+        <!-- Module 5 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing a young person overcoming bullying and peer pressure" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2dbc5884-756a-4c22-8ff1-465555d21425.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Mental Health, Bullying & Peer Pressure</h3>
+          <p class="text-gray-700 mb-4 flex-grow">This module provides a safe space to discuss mental health, bullying, and peer pressure, equipping youth with tools to navigate these challenges. It covers strategies for managing stress, recognizing signs of mental health struggles, and seeking help when needed. The session also addresses how to respond to bullying, both as a victim and a bystander, and how to resist negative peer pressure. Through workshops and peer-sharing activities, participants learn coping mechanisms and build resilience to maintain their mental well-being.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+        <!-- Module 6 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Illustration showing a young person embracing body positivity and physical changes" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/334a54e7-9519-478e-7e95-425ec3eedcfc.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Puberty, Masturbation & Body Positivity</h3>
+          <p class="text-gray-700 mb-4 flex-grow">The Puberty, Masturbation & Body Positivity module offers a supportive environment to discuss physical and emotional changes during adolescence. It provides accurate information about puberty, addresses myths and stigmas around masturbation, and promotes body positivity. Participants learn to embrace their changing bodies, develop a healthy body image, and practice self-acceptance. Through open discussions and educational content, this session helps youth navigate adolescence with confidence and a positive self-image, free from societal pressures.</p>
+          <a class="mt-auto inline-block text-indigo-600 font-semibold hover:underline" href="#">Learn more</a>
+        </article>
+      </div>
+      <div class="text-center mt-10">
+        <button class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-8 py-3 shadow-md hover:bg-indigo-700 transition" id="show-more-modules">Show More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multimedia Resources -->
+  <section aria-label="Multimedia resources section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-indigo-50">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Multimedia Resources</h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <a class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition" href="#">
+          <img alt="Icon representing videos and animations, a play button on a screen" class="mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f188db40-f020-4635-b0ef-984486811b62.jpg" width="100"/>
+          <h3 class="font-semibold text-indigo-700 mb-2">Videos & Animations</h3>
+          <p class="text-gray-700">Short, engaging videos about gender equality and safety.</p>
+          <span class="mt-3 inline-block text-indigo-600 font-semibold hover:underline">Watch now</span>
+        </a>
+        <a class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition" href="#">
+          <img alt="Icon representing posters and infographics, a poster with charts and images" class="mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6784603f-92d4-461e-4a61-07ff5e8ef717.jpg" width="100"/>
+          <h3 class="font-semibold text-indigo-700 mb-2">Posters & Infographics</h3>
+          <p class="text-gray-700">Visual content designed to explain complex topics simply.</p>
+          <span class="mt-3 inline-block text-indigo-600 font-semibold hover:underline">View gallery</span>
+        </a>
+        <a class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition" href="#">
+          <img alt="Icon representing booklets and materials, a booklet with pages" class="mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/51db9f66-0379-4838-db03-5a2ab6d6871e.jpg" width="100"/>
+          <h3 class="font-semibold text-indigo-700 mb-2">Booklets & Materials</h3>
+          <p class="text-gray-700">Downloadable resources for workshops and self-learning.</p>
+          <span class="mt-3 inline-block text-indigo-600 font-semibold hover:underline">Download</span>
+        </a>
+        <a class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition" href="#">
+          <img alt="Icon representing games and activities, a game controller and puzzle pieces" class="mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/683d2e8c-5bf2-48d8-ea8e-25a5ec8643ad.jpg" width="100"/>
+          <h3 class="font-semibold text-indigo-700 mb-2">Games & Activities</h3>
+          <p class="text-gray-700">Interactive games and activities to reinforce learning.</p>
+          <span class="mt-3 inline-block text-indigo-600 font-semibold hover:underline">Play & learn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Youth Stories & Blogs -->
+  <section aria-label="Youth stories and blogs section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-white" id="stories">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Youth Stories & Blogs</h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Story 1 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Portrait of Rohit, a 17-year-old youth from Mumbai, sharing his story about overcoming bullying" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/67ab8837-7711-48fd-a212-5ee000908152.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-1">Finding My Voice Against Bullying</h3>
+          <p class="text-sm text-gray-600 mb-2 font-semibold">Success Story</p>
+          <p class="text-gray-700 flex-grow">I was bullied for three years before I found the courage to speak up. The support from my friends and mentors helped me overcome...</p>
+          <p class="mt-4 text-sm text-gray-500 font-semibold">Rohit, 17 - Mumbai, Maharashtra</p>
+          <a class="mt-3 inline-block text-indigo-600 font-semibold hover:underline" href="#">Read full story</a>
+        </article>
+        <!-- Story 2 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Portrait of Arjun, a 19-year-old youth from Bangalore, sharing a poem about redefining masculinity" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b40c0da8-2778-4cf5-ff3f-093c4e5c9cce.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-1">Poem: Redefining Masculinity</h3>
+          <p class="text-sm text-gray-600 mb-2 font-semibold">Creative Expression</p>
+          <p class="text-gray-700 flex-grow">They told me boys don't cry, boys don't feel, boys don't heal. But I learned that real strength comes from embracing all parts of myself...</p>
+          <p class="mt-4 text-sm text-gray-500 font-semibold">Arjun, 19 - Bangalore, Karnataka</p>
+          <a class="mt-3 inline-block text-indigo-600 font-semibold hover:underline" href="#">Read full story</a>
+        </article>
+        <!-- Story 3 -->
+        <article class="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <img alt="Portrait of Vikram, a 20-year-old youth from Delhi NCR, sharing his guest post about starting a consent workshop" class="rounded-md mb-4 object-cover h-40 w-full" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cafe76a6-2c5f-4a78-a623-ee79aff5cd8c.jpg" width="400"/>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-1">How I Started a Consent Workshop in My School</h3>
+          <p class="text-sm text-gray-600 mb-2 font-semibold">Guest Post</p>
+          <p class="text-gray-700 flex-grow">After attending Children's Initiative workshop, I realized how little my classmates knew about consent. With support from my teachers...</p>
+          <p class="mt-4 text-sm text-gray-500 font-semibold">Vikram, 20 - Delhi, NCR</p>
+          <a class="mt-3 inline-block text-indigo-600 font-semibold hover:underline" href="#">Read full story</a>
+        </article>
+      </div>
+      <div class="mt-10">
+        <a class="inline-block text-indigo-600 font-semibold hover:underline text-center w-full sm:w-auto" href="#">View all stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Events -->
+  <section aria-label="Community events section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-indigo-50" id="events">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Community Events</h2>
+      <div class="space-y-10 max-w-4xl mx-auto">
+        <!-- Event 1 -->
+        <article class="bg-white rounded-lg shadow-md p-6 text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center space-x-6">
+            <div class="text-indigo-700 font-extrabold text-4xl min-w-[60px] text-center leading-none select-none">
+              15<br/><span class="text-base font-normal">June</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-indigo-700">Workshop: Healthy Relationships</h3>
+              <p class="text-gray-700">Interactive session on building healthy relationships, understanding boundaries, and effective communication.</p>
+              <p class="text-sm text-gray-600 mt-1">4:00 PM - 6:00 PM | Zoom</p>
+              <p class="text-sm text-gray-600 font-semibold mt-1">Facilitator: Anirban</p>
+            </div>
+          </div>
+          <a class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-6 py-2 hover:bg-indigo-700 transition whitespace-nowrap self-start sm:self-auto" href="#">Register now</a>
+        </article>
+        <!-- Event 2 -->
+        <article class="bg-white rounded-lg shadow-md p-6 text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center space-x-6">
+            <div class="text-indigo-700 font-extrabold text-4xl min-w-[60px] text-center leading-none select-none">
+              28<br/><span class="text-base font-normal">June</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-indigo-700">Youth Meetup: Mental Health Matters</h3>
+              <p class="text-gray-700">A safe space for young people to discuss mental health challenges and learn coping strategies.</p>
+              <p class="text-sm text-gray-600 mt-1">2:00 PM - 5:00 PM | Basirhat Community Center</p>
+              <p class="text-sm text-gray-600 font-semibold mt-1">Facilitator: Dr. Sharma</p>
+            </div>
+          </div>
+          <a class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-6 py-2 hover:bg-indigo-700 transition whitespace-nowrap self-start sm:self-auto" href="#">Register now</a>
+        </article>
+        <!-- Event 3 -->
+        <article class="bg-white rounded-lg shadow-md p-6 text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center space-x-6">
+            <div class="text-indigo-700 font-extrabold text-4xl min-w-[60px] text-center leading-none select-none">
+              10<br/><span class="text-base font-normal">July</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-indigo-700">Cyber Safety Awareness Day</h3>
+              <p class="text-gray-700">Join our online campaign to promote cyber safety awareness among youth. Share posts, participate in quizzes.</p>
+              <p class="text-sm text-gray-600 mt-1">All Day | Social Media</p>
+              <p class="text-sm text-indigo-700 font-bold mt-1">#SafeOnlineIndia</p>
+            </div>
+          </div>
+          <a class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-6 py-2 hover:bg-indigo-700 transition whitespace-nowrap self-start sm:self-auto" href="#">Get involved</a>
+        </article>
+        <!-- Event 4 -->
+        <article class="bg-white rounded-lg shadow-md p-6 text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center space-x-6">
+            <div class="text-indigo-700 font-extrabold text-4xl min-w-[60px] text-center leading-none select-none">
+              22<br/><span class="text-base font-normal">July</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-indigo-700">Volunteer Training: Peer Mentorship</h3>
+              <p class="text-gray-700">Training session for youth interested in becoming peer mentors for the Children's Initiative program.</p>
+              <p class="text-sm text-gray-600 mt-1">10:00 AM - 4:00 PM | Youth Center, North 24 Parganas</p>
+              <p class="text-sm text-gray-600 font-semibold mt-1">Facilitator: Anirban</p>
+            </div>
+          </div>
+          <a class="inline-block bg-indigo-600 text-white font-semibold rounded-md px-6 py-2 hover:bg-indigo-700 transition whitespace-nowrap self-start sm:self-auto" href="#">Apply now</a>
+        </article>
+      </div>
+      <div class="mt-10">
+        <a class="inline-block text-indigo-600 font-semibold hover:underline" href="#">View all events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANI Chatbot -->
+  <section aria-label="ANI Chatbot section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-white" id="ani-chatbot">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Meet ANI Chatbot</h2>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+        <div class="md:w-1/2 text-left">
+          <p class="text-lg text-gray-700 mb-6">Our 24/7 AI + Rule-based chatbot is here to answer your questions about gender-based violence, child rights, legal support, health & emotional safety.</p>
+          <blockquote class="border-l-4 border-indigo-600 pl-6 italic text-indigo-700 font-semibold mb-6">
+            "Namaskar! I'm Ani.<br/>I'm here to support you with questions about gender, safety, mental health, and more.<br/>Feel free to message me anytime!"
+          </blockquote>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+            <li>Provides verified information and local referrals</li>
+            <li>Available in English, Hindi & Bengali</li>
+            <li>Friendly, youth-safe, non-judgmental interface</li>
+            <li>Connects you with helpline numbers when needed</li>
+          </ul>
+          <p class="text-sm text-gray-500">ANI is designed to provide information only. In case of emergencies, please contact appropriate helplines or authorities.</p>
+        </div>
+        <div class="md:w-1/2 flex flex-col items-center">
+          <img alt="ANI Chatbot logo, stylized friendly robot face with speech bubble" class="mb-6 rounded-full shadow-lg" height="200" loading="lazy" src="Anichatbot.jpg" width="200"/>
+          <img alt="Screenshot of ANI Chatbot interface showing a friendly chat conversation in English" class="rounded-lg shadow-md max-w-full h-auto" height="300" loading="lazy" src="images/Screenshootchat.jpg" width="400"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section aria-label="Resources section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-indigo-50" id="resources">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Resources</h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Helpline Numbers -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-left">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Helpline Numbers</h3>
+          <ul class="text-gray-700 space-y-2">
+            <li><span class="font-semibold">Child Helpline:</span> 1098</li>
+            <li><span class="font-semibold">Women Helpline:</span> 181</li>
+            <li><span class="font-semibold">Mental Health Helpline:</span> 1800-599-0019</li>
+            <li><span class="font-semibold">Emergency Police:</span> 100</li>
+          </ul>
+        </div>
+        <!-- Legal Resources -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-left">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Legal Resources</h3>
+          <ul class="text-gray-700 space-y-2">
+            <li>
+              <a class="hover:underline text-indigo-600 font-semibold" href="#">Child Rights & Protection</a>
+              <p class="text-sm">Information about POCSO Act, Juvenile Justice Act, and Right to Education</p>
+            </li>
+            <li>
+              <a class="hover:underline text-indigo-600 font-semibold" href="#">Sexual Harassment Laws</a>
+              <p class="text-sm">Understanding legal protections against sexual harassment</p>
+            </li>
+            <li>
+              <a class="hover:underline text-indigo-600 font-semibold" href="#">Cyber Crime & Online Safety</a>
+              <p class="text-sm">Legal framework for digital rights and reporting cyber crimes</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Support Services -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-left">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Support Services</h3>
+          <p class="text-gray-700 mb-4">Find local support services across India for counseling, legal aid, and shelter.</p>
+          <a class="inline-block text-indigo-600 font-semibold hover:underline" href="#">Directory of services</a>
+        </div>
+        <!-- Educational Materials -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-left">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Educational Materials</h3>
+          <p class="text-gray-700 mb-4">Download guides, worksheets, and activity books for learning and workshops.</p>
+          <a class="inline-block text-indigo-600 font-semibold hover:underline mb-6" href="#">Download resources</a>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Training Opportunities</h3>
+          <p class="text-gray-700 mb-4">Explore training programs for peer education and youth advocacy.</p>
+          <a class="inline-block text-indigo-600 font-semibold hover:underline" href="#">Find training</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Anirban (Ani) -->
+  <section aria-label="About Anirban (Ani) section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/3 flex justify-center">
+        <img 
+          alt="Portrait of Anirban (Ani), a social worker and youth mentor from India" 
+          class="rounded-full shadow-lg max-w-full h-auto" 
+          height="300" 
+          loading="lazy" 
+          src="images/Anirban.jpg" 
+          width="300"
+        />
+      </div>
+      <div class="md:w-2/3">
+        <h2 class="text-3xl font-extrabold text-indigo-700 mb-4">Anirban (Ani)</h2>
+        <p class="text-gray-700 mb-4">Is a social worker, human rights activist, and passionate youth mentor from India with 7+ years of experience working with vulnerable communities.</p>
+        <p class="text-gray-700 mb-4">He has trained hundreds of youth on gender education, preventing trafficking, mental health, consent, relationships, and community action.</p>
+        <h3 class="text-xl font-semibold text-indigo-700 mb-2">Vision</h3>
+        <p class="text-gray-700">To empower India's youth to know their rights, understand healthy masculinity, break gender stereotypes, ask for help without fear, and be part of safe, equal communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section aria-label="Contact section" class="py-16 px-6 sm:px-12 md:px-20 lg:px-32 bg-indigo-50" id="contact">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-indigo-700 mb-10">Contact Us</h2>
+      <p class="text-gray-700 max-w-3xl mx-auto mb-10">Have questions or want to get involved? Reach out to us using the contact information below.</p>
+      <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 text-left">
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Anirban (Ani)</h3>
+          <p class="text-gray-700">Basirhat, North 24 Parganas, West Bengal – 743422, India</p>
+          <p class="text-gray-700">Email: <a class="text-indigo-600 hover:underline" href="mailto:gainanirban@gmail.com">gainanirban@gmail.com</a></p>
+          <p class="text-gray-700">Phone: <a class="text-indigo-600 hover:underline" href="tel:+918768088661">+91 8768088661</a></p>
+        </div>
+        <form action="#" aria-label="Contact form" class="space-y-6" method="POST">
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="name">Name</label>
+            <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="name" name="name" placeholder="Your name" required="" type="text"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="email">Email</label>
+            <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="message">Message</label>
+            <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="message" name="message" placeholder="Write your message here" required="" rows="4"></textarea>
+          </div>
+          <button class="bg-indigo-600 text-white font-semibold rounded-md px-8 py-3 hover:bg-indigo-700 transition" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
+      <p>© 2024 Children's Initiative India. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a aria-label="Facebook" class="hover:text-indigo-600 transition" href="#"><i class="fab fa-facebook fa-lg"></i></a>
+        <a aria-label="Twitter" class="hover:text-indigo-600 transition" href="#"><i class="fab fa-twitter fa-lg"></i></a>
+        <a aria-label="Instagram" class="hover:text-indigo-600 transition" href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        <a aria-label="YouTube" class="hover:text-indigo-600 transition" href="#"><i class="fab fa-youtube fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Show more modules button (dummy functionality)
+    const showMoreBtn = document.getElementById('show-more-modules');
+    showMoreBtn.addEventListener('click', () => {
+      alert('More modules coming soon!');
+    });
+
+    // File processing script
+    var gk_isXlsx = false;
+    var gk_xlsxFileLookup = {};
+    var gk_fileData = {};
+
+    function filledCell(cell) {
+      return cell !== '' && cell != null;
+    }
+
+    function loadFileData(filename) {
+      if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+        try {
+          var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+          var firstSheetName = workbook.SheetNames[0];
+          var worksheet = workbook.Sheets[firstSheetName];
+
+          // Convert sheet to JSON to filter blank rows
+          var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+          // Filter out blank rows (rows where all cells are empty, null, or undefined)
+          var filteredData = jsonData.filter(row => row.some(filledCell));
+
+          // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+          var headerRowIndex = filteredData.findIndex((row, index) =>
+            index < filteredData.length - 1 &&
+            row.filter(filledCell).length < filteredData[index + 1].filter(filledCell).length
+          );
+
+          // Fallback
+          if (headerRowIndex === -1 || headerRowIndex > 25) {
+            headerRowIndex = 0;
+          }
+
+          // Convert filtered JSON back to CSV
+          var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+          csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+          return csv;
+        } catch (e) {
+          console.error('Error processing file:', e);
+          return "";
+        }
+      }
+      return gk_fileData[filename] || "";
+    }
+  </script>
+</body>
+</html>
