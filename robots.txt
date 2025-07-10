@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suppar999.github.io/Boys-Initiative/sitemap.xml
